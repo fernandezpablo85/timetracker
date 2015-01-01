@@ -17,6 +17,7 @@ func main() {
 	fmt.Printf("listening on port %s...\n", port)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
+		fmt.Printf("error while binding to port %d %s", port, err)
 		panic(err)
 	}
 }
